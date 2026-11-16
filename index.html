@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MuteBar — Mute any app on your Mac</title>
+<meta name="description" content="MuteBar is a tiny menu-bar app for macOS that silences individual apps. No driver, no admin rights, no subscriptions.">
+<style>
+  :root {
+    --indigo: #5865f2;
+    --navy: #161d3d;
+    --text: #1d2233;
+    --muted: #5c6478;
+    --border: #e4e7f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: #f7f8fc;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+  header {
+    background: linear-gradient(180deg, var(--indigo), var(--navy));
+    color: #fff;
+    padding: 72px 0 64px;
+  }
+  .brand { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+  .brand img { width: 64px; height: 64px; border-radius: 14px; }
+  .brand span { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+  h1 { font-size: 44px; line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .lede { font-size: 20px; margin: 0 0 28px; color: rgba(255,255,255,0.85); max-width: 620px; }
+  .cta {
+    display: inline-block; background: #fff; color: var(--navy); font-weight: 700;
+    padding: 14px 28px; border-radius: 12px; text-decoration: none; font-size: 17px;
+  }
+  .cta.secondary { background: rgba(255,255,255,0.14); color: #fff; margin-left: 10px; }
+  section { padding: 56px 0; }
+  h2 { font-size: 28px; letter-spacing: -0.01em; margin: 0 0 18px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .price { font-size: 34px; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+  td, th { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 15px; }
+  th { background: #f1f3fb; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  footer { background: #fff; border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--indigo); }
+  .links a { margin-right: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/app-icon.png" alt="MuteBar icon">
+      <span>MuteBar</span>
+    </div>
+    <h1>Mute any app on your Mac.<br>One click.</h1>
+    <p class="lede">MuteBar is a tiny menu-bar button that silences individual apps. No kernel extension, no virtual audio driver, no admin rights, no subscription.</p>
+    <a class="cta" href="#buy">Get MuteBar — $3.99</a>
+    <a class="cta secondary" href="privacy.html">Privacy</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Why MuteBar</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Per-app mute</h3>
+        <p>Silence the app you don't want to hear without touching system volume or muting everything else.</p>
+      </div>
+      <div class="card">
+        <h3>No driver, no admin</h3>
+        <p>Built on public Core Audio process taps. Nothing to install in /Library, no restart, no permissions prompt.</p>
+      </div>
+      <div class="card">
+        <h3>Nothing leaves your Mac</h3>
+        <p>No accounts, no analytics, no crash reporting, no network access at all. It cannot phone home.</p>
+      </div>
+      <div class="card">
+        <h3>Remembers your choices</h3>
+        <p>Mute settings survive quitting and relaunching MuteBar, and are re-applied after sleep or a restart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <table>
+      <tr><th>1</th><td>Play audio in any app — a game, a browser tab, a music player.</td></tr>
+      <tr><th>2</th><td>Click the mute button in your menu bar.</td></tr>
+      <tr><th>3</th><td>Click the app you want quiet. Click again to bring it back.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <h2>Get MuteBar</h2>
+    <p class="price">$3.99</p>
+    <p>One-time purchase on the Mac App Store. Requires macOS 14.4 or later.</p>
+    <p class="links">
+      <a class="cta" href="#buy">Download on the Mac App Store</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="support.html">Support</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 MuteBar. Not affiliated with Apple Inc.</p>
+    <p class="links"><a href="privacy.html">Privacy policy</a><a href="support.html">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>

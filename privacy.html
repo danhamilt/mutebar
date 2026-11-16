@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MuteBar — Privacy Policy</title>
+<style>
+  :root { --indigo: #5865f2; --navy: #161d3d; --text: #1d2233; --muted: #5c6478; --border: #e4e7f2; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; color: var(--text); background: #f7f8fc; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { background: linear-gradient(180deg, var(--indigo), var(--navy)); color: #fff; padding: 52px 0 40px; }
+  h1 { font-size: 36px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: rgba(255,255,255,0.82); }
+  main { background: #fff; border: 1px solid var(--border); border-radius: 18px; margin: -24px 0 48px; padding: 36px 40px; }
+  h2 { font-size: 21px; margin: 34px 0 10px; }
+  h2:first-of-type { margin-top: 0; }
+  p, li { font-size: 16px; }
+  ul { padding-left: 22px; }
+  .summary { background: #eef0fe; border-radius: 12px; padding: 16px 20px; margin: 0 0 28px; }
+  footer { color: var(--muted); font-size: 14px; padding: 0 0 48px; }
+  footer a { color: var(--indigo); }
+  code { background: #f1f3fb; padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p>MuteBar for macOS — effective November 16, 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="summary">
+    <strong>The short version:</strong> MuteBar collects nothing, tracks nothing, and has no network access. Everything it does happens on your Mac.
+  </div>
+
+  <h2>What MuteBar does</h2>
+  <p>MuteBar is a menu-bar utility that lets you mute individual applications. To do this it uses Apple's public Core Audio process tap API (<code>AudioHardwareCreateProcessTap</code>) to attach a private tap to the audio produced by apps you select, and sets the tap's mute behaviour so that the selected app's output is silenced while the tap remains active.</p>
+
+  <h2>Data collection</h2>
+  <p>MuteBar collects no personal data. It has no analytics, no advertising, no crash reporting, no telemetry, and no third-party SDKs. The app contains no networking code and is unable to send data anywhere. Nothing you use MuteBar with is transmitted off your Mac.</p>
+  <p>No account is required, and no information is shared with the developer or with anyone else.</p>
+
+  <h2>Audio handling</h2>
+  <p>Audio buffers delivered by a Core Audio tap are discarded immediately in memory. MuteBar does not record, store, write, transmit, or analyse any audio. It never requests microphone input, and it does not read audio from input devices. The Audio Input capability declared by the app exists because macOS classifies Core Audio process taps under audio input APIs; the captured data is used only to keep the tap active for muting and is dropped at once.</p>
+
+  <h2>What is stored on your Mac</h2>
+  <ul>
+    <li><strong>Mute preferences</strong> — the bundle identifiers of apps you have muted, kept in the standard macOS preferences system (<code>NSUserDefaults</code>) for your user account only.</li>
+    <li><strong>Log file</strong> — a short local diagnostic log at <code>~/Library/Logs/MuteBar.log</code> (inside the app's container when sandboxed). It contains app names and status messages only, never audio. You can read or delete it at any time.</li>
+  </ul>
+  <p>Both are deleted when you uninstall the app.</p>
+
+  <h2>Permissions</h2>
+  <p>MuteBar runs in the macOS App Sandbox. It requests no Screen Recording permission, no Accessibility permission, and no Full Disk Access. On some macOS versions the system may show a one-time prompt related to audio input; declining it does not affect any other part of the app.</p>
+
+  <h2>Login items</h2>
+  <p>If you turn on “Start at Login”, macOS registers MuteBar as a login item using the standard system mechanism (<code>SMAppService</code>). This registration is visible and revocable in System Settings › General › Login Items. MuteBar never registers anything else.</p>
+
+  <h2>Children</h2>
+  <p>MuteBar is a general utility and is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will ship with a new release of the app and the date above will be updated. Material changes will be noted in the app's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or requests about this policy can be sent to <a href="mailto:danh@orbisorg.com">danh@orbisorg.com</a>. Replace that address with your real support address before submitting the app to the Mac App Store.</p>
+</main>
+
+<footer class="wrap">
+  <p><a href="index.html">← Back to MuteBar</a></p>
+</footer>
+</body>
+</html>
